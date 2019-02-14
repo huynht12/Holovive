@@ -1,12 +1,5 @@
-# HoloViveObserver
+# HoloVive
 Observe a VR session from the same room using a HoloLens!
-
-# Building
-Open the HoloViveObserver directory using *Unity 5.5.2f1 (64-bit)*, Unity 5.5.0 as well as Unity 5.6.x will not work.
-
-Never update the Steam VR plugin. It is modified by @Sorob to compile in Hololens
-
-Holotoolkit is also modified to fix the Cursor errors. Updating it is not recommended.
 
 This project uses Unity's cloud based Multiplayer service.  After opening the project
  go to Window > Services to open the Services tab.  It is important to mention you 
