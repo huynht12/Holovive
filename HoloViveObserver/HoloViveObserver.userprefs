@@ -1,8 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SteamVR\Scripts\SteamVR_Menu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AlignmentManager.cs">
     <Files>
-      <File FileName="Assets\SteamVR\Scripts\SteamVR_Menu.cs" Line="322" Column="18" />
+      <File FileName="Assets\Scripts\MakeParent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AlignmentManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AlignmentClient.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AlignmentBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Blocks\Scripts\BlockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\HoloToolkit\SpatialMapping\Scripts\RemoteMapping\MeshSaver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Blocks\Scripts\BlockManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainScene.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

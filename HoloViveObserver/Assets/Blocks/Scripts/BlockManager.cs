@@ -7,6 +7,7 @@ public class BlockManager : NetworkBehaviour
     public SteamVR_TrackedController rightController;
     public GameObject cubeContainer;
     public GameObject cubeAsset;
+	public int side = 0;
 
     [SyncVar]
     private bool placingCube = false;
@@ -79,6 +80,7 @@ public class BlockManager : NetworkBehaviour
         currentCube = null;
 
         placingCube = false;
+		side += 1;
     }
 
     [ClientCallback]
@@ -86,14 +88,27 @@ public class BlockManager : NetworkBehaviour
     {
         Vector3 left = leftController.transform.position;
         Vector3 right = rightController.transform.position;
-        CmdUpdateCubePosition((left + right) / 2, right - left);
+		Quaternion leftRotation = leftController.transform.rotation;
+		Quaternion rightRotation = rightController.transform.rotation;
+		if (side % 2 == 0) {
+			CmdUpdateCubePosition (left, leftRotation, new Vector3 (0.05f, 0.05f, 0.5f));
+			//side += 1;
+		}
+		else {
+			CmdUpdateCubePosition (right, rightRotation, new Vector3 (0.05f, 0.05f, 0.5f));
+			//side += 1;
+		}
+			
+        //CmdUpdateCubePosition((left + right) / 2, right - left);
     }
 
     [Command]
-    private void CmdUpdateCubePosition(Vector3 position, Vector3 scale)
+	private void CmdUpdateCubePosition(Vector3 position, Quaternion rotation, Vector3 scale)
     {
         if (!currentCube) return;
-        currentCube.transform.position = position;
-        currentCube.transform.localScale = scale;
+		currentCube.transform.position = position;//cubeContainer.transform.position;
+		currentCube.transform.localScale = scale;//new Vector3 (0.05f, 0.05f, 0.5f);
+		currentCube.transform.localRotation = rotation;
+
     }
 }

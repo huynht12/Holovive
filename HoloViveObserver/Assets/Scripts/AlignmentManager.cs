@@ -8,7 +8,7 @@ public class AlignmentManager : NetworkBehaviour
         Normal,
         Aligning,
     }
-
+		
     public delegate void AlignmentStartedHandler();
     public delegate void AlignmentFinishedHandler(bool success, Vector3 position, float rotationY);
     public delegate void ControllersAvailableHandler();
